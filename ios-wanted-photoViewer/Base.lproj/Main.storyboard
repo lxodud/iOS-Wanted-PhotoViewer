@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_wanted_photoViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="iJ4-cF-Wd7">
+                                <rect key="frame" x="8" y="67" width="377" height="518"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hJ4-0j-Van">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="85.333333333333329"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="glE-3M-UhJ">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="196.66666666666666" height="82.333333333333343"/>
+                                            </imageView>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oTe-PQ-BvD">
+                                                <rect key="frame" x="204.66666666666666" y="40.666666666666671" width="89.333333333333343" height="4"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-CT-Rcf">
+                                                <rect key="frame" x="302" y="25.333333333333332" width="75" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xaw-xP-7D9">
+                                        <rect key="frame" x="0.0" y="108.33333333333334" width="377" height="85"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EJp-ht-slY">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="196.66666666666666" height="82"/>
+                                            </imageView>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wJk-1F-xpF">
+                                                <rect key="frame" x="204.66666666666666" y="40.333333333333314" width="89.333333333333343" height="4"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqF-Hg-JKM">
+                                                <rect key="frame" x="302" y="25.333333333333318" width="75" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DiY-7z-H1m">
+                                        <rect key="frame" x="0.0" y="216.33333333333334" width="377" height="85.333333333333343"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oGM-Zw-hQB">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="196.66666666666666" height="82.333333333333343"/>
+                                            </imageView>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bjv-fH-NdT">
+                                                <rect key="frame" x="204.66666666666666" y="40.666666666666686" width="89.333333333333343" height="4"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZS-Az-7G3">
+                                                <rect key="frame" x="302" y="25.666666666666689" width="75" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YiB-LI-2u5">
+                                        <rect key="frame" x="0.0" y="324.66666666666669" width="377" height="85"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XlJ-fY-6dF">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="196.66666666666666" height="82"/>
+                                            </imageView>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rBS-kL-L6p">
+                                                <rect key="frame" x="204.66666666666666" y="40.666666666666629" width="89.333333333333343" height="4"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBp-BV-d0M">
+                                                <rect key="frame" x="302" y="25.333333333333318" width="75" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Eew-md-OSy">
+                                        <rect key="frame" x="0.0" y="432.66666666666669" width="377" height="85.333333333333314"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4oB-lY-W1Z">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="196.66666666666666" height="82.333333333333343"/>
+                                            </imageView>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s3y-7S-Q8K">
+                                                <rect key="frame" x="204.66666666666666" y="40.666666666666686" width="89.333333333333343" height="4"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obr-id-ZkQ">
+                                                <rect key="frame" x="302" y="25.666666666666689" width="75" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkI-Fr-ayh">
+                                <rect key="frame" x="8" y="602.33333333333337" width="377" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4oB-lY-W1Z" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="7Pw-cP-Fmh"/>
+                            <constraint firstItem="XlJ-fY-6dF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="8Wx-yF-xca"/>
+                            <constraint firstItem="XlJ-fY-6dF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="8fI-UM-HF9"/>
+                            <constraint firstItem="4oB-lY-W1Z" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Jad-Gl-w9g"/>
+                            <constraint firstItem="glE-3M-UhJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="KaJ-40-NuC"/>
+                            <constraint firstItem="EkI-Fr-ayh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="KeE-Jq-ydh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iJ4-cF-Wd7" secondAttribute="trailing" constant="8" id="Loj-Xy-e8Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EkI-Fr-ayh" secondAttribute="trailing" constant="8" id="d3g-Kf-P5K"/>
+                            <constraint firstItem="EJp-ht-slY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="gQj-nm-rRl"/>
+                            <constraint firstItem="EJp-ht-slY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="hjj-wp-nm3"/>
+                            <constraint firstItem="oGM-Zw-hQB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="idD-3c-MrG"/>
+                            <constraint firstItem="iJ4-cF-Wd7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="lNa-wl-u31"/>
+                            <constraint firstItem="EkI-Fr-ayh" firstAttribute="top" secondItem="iJ4-cF-Wd7" secondAttribute="bottom" constant="17.333333333333371" id="npt-J4-q2s"/>
+                            <constraint firstItem="oGM-Zw-hQB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="qcG-Iw-ypw"/>
+                            <constraint firstItem="glE-3M-UhJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="ro7-rA-WKa"/>
+                            <constraint firstItem="iJ4-cF-Wd7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="zYB-vT-m2A"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="allLoadButton" destination="EkI-Fr-ayh" id="Asn-ts-UZm"/>
+                        <outletCollection property="imageViews" destination="glE-3M-UhJ" collectionClass="NSMutableArray" id="s5K-Ri-SZa"/>
+                        <outletCollection property="imageViews" destination="EJp-ht-slY" collectionClass="NSMutableArray" id="DTf-YU-GbG"/>
+                        <outletCollection property="imageViews" destination="oGM-Zw-hQB" collectionClass="NSMutableArray" id="T41-oA-DmB"/>
+                        <outletCollection property="imageViews" destination="XlJ-fY-6dF" collectionClass="NSMutableArray" id="ymS-hO-SJ3"/>
+                        <outletCollection property="imageViews" destination="4oB-lY-W1Z" collectionClass="NSMutableArray" id="b8W-fo-EPO"/>
+                        <outletCollection property="loadButtons" destination="nJI-CT-Rcf" collectionClass="NSMutableArray" id="mRm-e7-4Na"/>
+                        <outletCollection property="loadButtons" destination="KqF-Hg-JKM" collectionClass="NSMutableArray" id="Cq6-IH-lNb"/>
+                        <outletCollection property="loadButtons" destination="oZS-Az-7G3" collectionClass="NSMutableArray" id="hez-FG-tLY"/>
+                        <outletCollection property="loadButtons" destination="WBp-BV-d0M" collectionClass="NSMutableArray" id="mcn-8p-XRD"/>
+                        <outletCollection property="loadButtons" destination="obr-id-ZkQ" collectionClass="NSMutableArray" id="yfd-7S-Q28"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
