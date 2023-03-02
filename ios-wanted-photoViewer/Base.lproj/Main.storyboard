@@ -31,7 +31,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-CT-Rcf">
                                                 <rect key="frame" x="302" y="25.333333333333332" width="75" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Load"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -44,10 +44,10 @@
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wJk-1F-xpF">
                                                 <rect key="frame" x="204.66666666666666" y="40.333333333333314" width="89.333333333333343" height="4"/>
                                             </progressView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqF-Hg-JKM">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqF-Hg-JKM">
                                                 <rect key="frame" x="302" y="25.333333333333318" width="75" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Load"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -60,10 +60,10 @@
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bjv-fH-NdT">
                                                 <rect key="frame" x="204.66666666666666" y="40.666666666666686" width="89.333333333333343" height="4"/>
                                             </progressView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZS-Az-7G3">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZS-Az-7G3">
                                                 <rect key="frame" x="302" y="25.666666666666689" width="75" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Load"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -76,10 +76,10 @@
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rBS-kL-L6p">
                                                 <rect key="frame" x="204.66666666666666" y="40.666666666666629" width="89.333333333333343" height="4"/>
                                             </progressView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBp-BV-d0M">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBp-BV-d0M">
                                                 <rect key="frame" x="302" y="25.333333333333318" width="75" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Load"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -92,10 +92,10 @@
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s3y-7S-Q8K">
                                                 <rect key="frame" x="204.66666666666666" y="40.666666666666686" width="89.333333333333343" height="4"/>
                                             </progressView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obr-id-ZkQ">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obr-id-ZkQ">
                                                 <rect key="frame" x="302" y="25.666666666666689" width="75" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Load"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -104,7 +104,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkI-Fr-ayh">
                                 <rect key="frame" x="8" y="602.33333333333337" width="377" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Load All Images"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -129,17 +129,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="allLoadButton" destination="EkI-Fr-ayh" id="Asn-ts-UZm"/>
                         <outletCollection property="imageViews" destination="glE-3M-UhJ" collectionClass="NSMutableArray" id="s5K-Ri-SZa"/>
                         <outletCollection property="imageViews" destination="EJp-ht-slY" collectionClass="NSMutableArray" id="DTf-YU-GbG"/>
                         <outletCollection property="imageViews" destination="oGM-Zw-hQB" collectionClass="NSMutableArray" id="T41-oA-DmB"/>
                         <outletCollection property="imageViews" destination="XlJ-fY-6dF" collectionClass="NSMutableArray" id="ymS-hO-SJ3"/>
                         <outletCollection property="imageViews" destination="4oB-lY-W1Z" collectionClass="NSMutableArray" id="b8W-fo-EPO"/>
-                        <outletCollection property="loadButtons" destination="nJI-CT-Rcf" collectionClass="NSMutableArray" id="mRm-e7-4Na"/>
-                        <outletCollection property="loadButtons" destination="KqF-Hg-JKM" collectionClass="NSMutableArray" id="Cq6-IH-lNb"/>
-                        <outletCollection property="loadButtons" destination="oZS-Az-7G3" collectionClass="NSMutableArray" id="hez-FG-tLY"/>
-                        <outletCollection property="loadButtons" destination="WBp-BV-d0M" collectionClass="NSMutableArray" id="mcn-8p-XRD"/>
-                        <outletCollection property="loadButtons" destination="obr-id-ZkQ" collectionClass="NSMutableArray" id="yfd-7S-Q28"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
