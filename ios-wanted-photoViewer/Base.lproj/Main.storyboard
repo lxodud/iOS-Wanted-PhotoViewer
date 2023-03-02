@@ -30,8 +30,13 @@
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-CT-Rcf">
                                                 <rect key="frame" x="302" y="25.333333333333332" width="75" height="34.333333333333343"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Load"/>
+                                                <connections>
+                                                    <action selector="tapFirstImageLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aww-uY-3xN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -46,8 +51,13 @@
                                             </progressView>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqF-Hg-JKM">
                                                 <rect key="frame" x="302" y="25.333333333333318" width="75" height="34.333333333333343"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Load"/>
+                                                <connections>
+                                                    <action selector="tapSecondImageLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTa-4U-2cG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -62,8 +72,13 @@
                                             </progressView>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZS-Az-7G3">
                                                 <rect key="frame" x="302" y="25.666666666666689" width="75" height="34.333333333333343"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Load"/>
+                                                <connections>
+                                                    <action selector="tapThirdImageLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NWp-Qh-h0L"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -78,8 +93,13 @@
                                             </progressView>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBp-BV-d0M">
                                                 <rect key="frame" x="302" y="25.333333333333318" width="75" height="34.333333333333343"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Load"/>
+                                                <connections>
+                                                    <action selector="tapFourthImageLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j6l-CU-pgf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -94,8 +114,13 @@
                                             </progressView>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obr-id-ZkQ">
                                                 <rect key="frame" x="302" y="25.666666666666689" width="75" height="34.333333333333343"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Load"/>
+                                                <connections>
+                                                    <action selector="tapFifthImageLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I65-RC-9lr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -103,8 +128,13 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkI-Fr-ayh">
                                 <rect key="frame" x="8" y="602.33333333333337" width="377" height="34.333333333333371"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Load All Images"/>
+                                <connections>
+                                    <action selector="tapLoadAllButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsQ-vR-2jx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -145,6 +175,9 @@
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

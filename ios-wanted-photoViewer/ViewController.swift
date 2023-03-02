@@ -7,49 +7,100 @@
 
 import UIKit
 
+enum ImageNumber: String, CaseIterable {
+    case mountain = "1369012"
+    case river = "1318341"
+    case alley = "1379801"
+    case lion = "167408"
+    case ironMan = "323408"
+}
+
 final class ViewController: UIViewController {
-    @IBOutlet var imageViews: [UIImageView]!
+    private let imageLoader = ImageLoader()
+    private let semaphore = DispatchSemaphore(value: 1)
     
-    private let imageURL: [String] = [ "https://wallpaperaccess.com/download/europe-4k-1369012",
-        "https://wallpaperaccess.com/download/europe-4k-1318341",
-        "https://wallpaperaccess.com/download/europe-4k-1379801",
-        "https://wallpaperaccess.com/download/cool-lion-167408",
-        "https://wallpaperaccess.com/download/ironman-hd-323408"
-    ]
+    @IBOutlet var imageViews: [UIImageView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        for (index, urlString) in imageURL.enumerated() {
-            let url = URL(string: urlString)!
-            
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                guard error == nil else { return }
-                
-                guard let response = response as? HTTPURLResponse,
-                      (200...299).contains(response.statusCode)
-                else {
-                    return
-                }
-                
-                guard let data = data,
-                      let image = UIImage(data: data)
-                else {
-                    return
-                }
-                
-                DispatchQueue.main.sync {
+    }
+    
+    private func loadImage(with url: URL, at index: Int) {
+        imageViews[index].image = UIImage(systemName: "photo")
+    
+        imageLoader.loadImage(with: url) { result in
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
                     self.imageViews[index].image = image
+                    self.semaphore.signal()
                 }
-            }.resume()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }
 
-// MARK: View Configuration
+// MARK: Action Method
 extension ViewController {
-    private func configureSubview() {
+    @IBAction func tapFirstImageLoadButton(_ sender: UIButton) {
+        let index = sender.tag
         
+        guard let url = ImageLoadRequest(path: ImageNumber.mountain.rawValue).convertURL() else {
+            return
+        }
+        
+        loadImage(with: url, at: index)
+    }
+    
+    @IBAction func tapSecondImageLoadButton(_ sender: UIButton) {
+        let index = sender.tag
+        
+        guard let url = ImageLoadRequest(path: ImageNumber.river.rawValue).convertURL() else {
+            return
+        }
+        
+        loadImage(with: url, at: index)
+    }
+    
+    @IBAction func tapThirdImageLoadButton(_ sender: UIButton) {
+        let index = sender.tag
+        
+        guard let url = ImageLoadRequest(path: ImageNumber.alley.rawValue).convertURL() else {
+            return
+        }
+        
+        loadImage(with: url, at: index)
+    }
+    
+    @IBAction func tapFourthImageLoadButton(_ sender: UIButton) {
+        let index = sender.tag
+        
+        guard let url = ImageLoadRequest(path: ImageNumber.lion.rawValue).convertURL() else {
+            return
+        }
+        
+        loadImage(with: url, at: index)
+    }
+    
+    @IBAction func tapFifthImageLoadButton(_ sender: UIButton) {
+        let index = sender.tag
+        
+        guard let url = ImageLoadRequest(path: ImageNumber.ironMan.rawValue).convertURL() else {
+            return
+        }
+        
+        loadImage(with: url, at: index)
+    }
+    
+    @IBAction func tapLoadAllButton(_ sender: Any) {
+        for (index, imageNumber) in zip(0...4, ImageNumber.allCases) {
+            guard let url = ImageLoadRequest(path: imageNumber.rawValue).convertURL() else {
+                return
+            }
+            
+            loadImage(with: url, at: index)
+        }
     }
 }

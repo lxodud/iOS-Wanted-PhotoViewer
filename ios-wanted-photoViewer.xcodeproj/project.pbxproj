@@ -14,6 +14,7 @@
 		0C4D232929AF2F0E00AFC7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4D232829AF2F0E00AFC7AA /* Assets.xcassets */; };
 		0C4D232C29AF2F0E00AFC7AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4D232A29AF2F0E00AFC7AA /* LaunchScreen.storyboard */; };
 		0C4D233429B0C6A700AFC7AA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D233329B0C6A700AFC7AA /* ImageLoader.swift */; };
+		0C4D233629B0C92700AFC7AA /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D233529B0C92700AFC7AA /* Requestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0C4D232B29AF2F0E00AFC7AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C4D232D29AF2F0E00AFC7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C4D233329B0C6A700AFC7AA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		0C4D233529B0C92700AFC7AA /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				0C4D232129AF2F0D00AFC7AA /* SceneDelegate.swift */,
 				0C4D232329AF2F0D00AFC7AA /* ViewController.swift */,
 				0C4D233329B0C6A700AFC7AA /* ImageLoader.swift */,
+				0C4D233529B0C92700AFC7AA /* Requestable.swift */,
 				0C4D232529AF2F0D00AFC7AA /* Main.storyboard */,
 				0C4D232829AF2F0E00AFC7AA /* Assets.xcassets */,
 				0C4D232A29AF2F0E00AFC7AA /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4D233629B0C92700AFC7AA /* Requestable.swift in Sources */,
 				0C4D232429AF2F0D00AFC7AA /* ViewController.swift in Sources */,
 				0C4D232029AF2F0D00AFC7AA /* AppDelegate.swift in Sources */,
 				0C4D233429B0C6A700AFC7AA /* ImageLoader.swift in Sources */,
