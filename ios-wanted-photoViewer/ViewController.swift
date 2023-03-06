@@ -19,7 +19,7 @@ final class ViewController: UIViewController {
     private let imageLoader = ImageLoader()
     private let semaphore = DispatchSemaphore(value: 1)
     
-    @IBOutlet var imageViews: [UIImageView]!
+    @IBOutlet private var imageViews: [UIImageView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ final class ViewController: UIViewController {
 
 // MARK: Action Method
 extension ViewController {
-    @IBAction func tapFirstImageLoadButton(_ sender: UIButton) {
+    @IBAction private func tapFirstImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
         guard let url = ImageLoadRequest(path: ImageNumber.mountain.rawValue).convertURL() else {
@@ -54,7 +54,7 @@ extension ViewController {
         loadImage(with: url, at: index)
     }
     
-    @IBAction func tapSecondImageLoadButton(_ sender: UIButton) {
+    @IBAction private func tapSecondImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
         guard let url = ImageLoadRequest(path: ImageNumber.river.rawValue).convertURL() else {
@@ -64,7 +64,7 @@ extension ViewController {
         loadImage(with: url, at: index)
     }
     
-    @IBAction func tapThirdImageLoadButton(_ sender: UIButton) {
+    @IBAction private func tapThirdImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
         guard let url = ImageLoadRequest(path: ImageNumber.alley.rawValue).convertURL() else {
@@ -74,7 +74,7 @@ extension ViewController {
         loadImage(with: url, at: index)
     }
     
-    @IBAction func tapFourthImageLoadButton(_ sender: UIButton) {
+    @IBAction private func tapFourthImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
         guard let url = ImageLoadRequest(path: ImageNumber.lion.rawValue).convertURL() else {
@@ -84,7 +84,7 @@ extension ViewController {
         loadImage(with: url, at: index)
     }
     
-    @IBAction func tapFifthImageLoadButton(_ sender: UIButton) {
+    @IBAction private func tapFifthImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
         guard let url = ImageLoadRequest(path: ImageNumber.ironMan.rawValue).convertURL() else {
@@ -94,7 +94,7 @@ extension ViewController {
         loadImage(with: url, at: index)
     }
     
-    @IBAction func tapLoadAllButton(_ sender: Any) {
+    @IBAction private func tapLoadAllButton(_ sender: Any) {
         for (index, imageNumber) in zip(0...4, ImageNumber.allCases) {
             guard let url = ImageLoadRequest(path: imageNumber.rawValue).convertURL() else {
                 return
