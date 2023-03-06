@@ -15,9 +15,14 @@ enum NetworkError: Error {
 
 final class ImageLoader {
     func loadImage(
-        with url: URL,
+        with request: Requestable,
         completionHandler: @escaping (Result<UIImage, NetworkError>) -> Void
     ) {
+        
+        guard let url = request.convertURL() else {
+            return
+        }
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil else {
                 completionHandler(.failure(.transportError))

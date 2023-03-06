@@ -24,10 +24,10 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    private func loadImage(with url: URL, at index: Int) {
+    private func loadImage(with request: Requestable, at index: Int) {
         imageViews[index].image = UIImage(systemName: "photo")
     
-        imageLoader.loadImage(with: url) { result in
+        imageLoader.loadImage(with: request) { result in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
@@ -45,60 +45,42 @@ extension ViewController {
     @IBAction private func tapFirstImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
-        guard let url = ImageLoadRequest(path: ImageNumber.mountain.rawValue).convertURL() else {
-            return
-        }
-        
-        loadImage(with: url, at: index)
+        let imageLoadRequest = ImageLoadRequest(path: ImageNumber.mountain.rawValue)
+        loadImage(with: imageLoadRequest, at: index)
     }
     
     @IBAction private func tapSecondImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
-        guard let url = ImageLoadRequest(path: ImageNumber.river.rawValue).convertURL() else {
-            return
-        }
-        
-        loadImage(with: url, at: index)
+        let imageLoadRequest = ImageLoadRequest(path: ImageNumber.river.rawValue)
+        loadImage(with: imageLoadRequest, at: index)
     }
     
     @IBAction private func tapThirdImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
-        guard let url = ImageLoadRequest(path: ImageNumber.alley.rawValue).convertURL() else {
-            return
-        }
-        
-        loadImage(with: url, at: index)
+        let imageLoadRequest = ImageLoadRequest(path: ImageNumber.alley.rawValue)
+        loadImage(with: imageLoadRequest, at: index)
     }
     
     @IBAction private func tapFourthImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
-        guard let url = ImageLoadRequest(path: ImageNumber.lion.rawValue).convertURL() else {
-            return
-        }
-        
-        loadImage(with: url, at: index)
+        let imageLoadRequest = ImageLoadRequest(path: ImageNumber.lion.rawValue)
+        loadImage(with: imageLoadRequest, at: index)
     }
     
     @IBAction private func tapFifthImageLoadButton(_ sender: UIButton) {
         let index = sender.tag
         
-        guard let url = ImageLoadRequest(path: ImageNumber.ironMan.rawValue).convertURL() else {
-            return
-        }
-        
-        loadImage(with: url, at: index)
+        let imageLoadRequest = ImageLoadRequest(path: ImageNumber.ironMan.rawValue)
+        loadImage(with: imageLoadRequest, at: index)
     }
     
     @IBAction private func tapLoadAllButton(_ sender: Any) {
         for (index, imageNumber) in zip(0...4, ImageNumber.allCases) {
-            guard let url = ImageLoadRequest(path: imageNumber.rawValue).convertURL() else {
-                return
-            }
-            
-            loadImage(with: url, at: index)
+            let imageLoadRequest = ImageLoadRequest(path: imageNumber.rawValue)
+            loadImage(with: imageLoadRequest, at: index)
         }
     }
 }
