@@ -17,7 +17,6 @@ enum ImageNumber: String, CaseIterable {
 
 final class ViewController: UIViewController {
     private let imageLoader = ImageLoader()
-    private let semaphore = DispatchSemaphore(value: 1)
     
     @IBOutlet private var imageViews: [UIImageView]!
     
@@ -33,7 +32,6 @@ final class ViewController: UIViewController {
             case .success(let image):
                 DispatchQueue.main.async {
                     self.imageViews[index].image = image
-                    self.semaphore.signal()
                 }
             case .failure(let error):
                 print(error)
